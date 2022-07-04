@@ -1,27 +1,82 @@
-# PassportChecker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+# Test
 
-## Development server
+## Pre-requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- NodeJS with NPM (stable version)
 
-## Code scaffolding
+- VS Code 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Rest service client (Postman, Insomnia, curl, etc.)
 
-## Build
+## Technologies used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Nest JS
 
-## Running unit tests
+- Angular 13 (with Material Design)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  
 
-## Running end-to-end tests
+# Steps to deploy apps
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+  
 
-## Further help
+## Prepare your database
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  
+
+1. The database is include into Backend project ([Passport-dataset-WS](https://github.com/Kibacode/Passport-dataset-WS)).
+
+  
+
+## Run backend rest-services
+
+1. Clone or download project from [Passport-dataset-WS](https://github.com/Kibacode/Passport-dataset-WS)
+
+2. Run a command line terminal in the generated folder.
+3. Compile project using npm
+- For linux-based or macOS Terminal and Windows CMD or Powershell.
+
+```bash
+
+npm install
+
+```
+
+4. Run the services using npm
+- For linux-based or macOS Terminal and Windows CMD or Powershell.
+
+```bash
+
+npm start
+
+```
+
+4. The web services will be deployed in port 3000.
+
+5. To test the service is working was configured an OpenApi instance, you can see it in http://localhost:3000/api.
+
+## Run front-end app
+
+1. Clone or download project from [Passport-checker](https://github.com/Kibacode/Passport-checker)
+
+2. Run a command line terminal in the generated folder.
+3. Compile project using npm.
+- For linux-based or macOS Terminal and Windows CMD or Powershell.
+
+```bash
+
+npm install
+
+```
+
+4. Run the services using npm
+- For linux-based or macOS Terminal and Windows CMD or Powershell.
+
+```bash
+
+npm start
+
+```
+
+4. The web app will be running in http://localhost:4200/.
