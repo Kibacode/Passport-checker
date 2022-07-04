@@ -1,0 +1,46 @@
+<mat-card>
+  <mat-card-title>Passport verifier</mat-card-title>
+  <mat-grid-list cols="2" rowHeight="100px" >
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-form-field appearance="standard">
+        <mat-label>Country Origin</mat-label>
+        <mat-select [(value)]="selectedOrigin" (valueChange)="onChangeOrigin()">
+          <mat-option value="">Select a country</mat-option>
+          <mat-option *ngFor="let country of countries" [value]="country">
+            {{ country }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-form-field appearance="standard">
+        <mat-label>Country Destination</mat-label>
+        <mat-select
+          [disabled]="!selectedOrigin"
+          [(value)]="selectedDestination"
+          (valueChange)="onChangeDestination()"
+        >
+          <mat-option value="">Select a country</mat-option>
+          <mat-option *ngFor="let country of countries" [value]="country">
+            {{ country }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile
+      [colspan]="2"
+      [rowspan]="1"
+      [style.display]="selectedDestination && selectedOrigin ? '' : 'none'"
+    >
+      <mat-card-content>
+        <div>
+          {{valueReturn}}
+        </div>
+        <div >
+          <button mat-button color="warn" (click)="resetControls()" >Clear values</button>
+        </div>
+      </mat-card-content>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>
