@@ -61,7 +61,7 @@ export class PassportInfoComponent {
             if(Number(data.requirements)  === -1 ){
               this.valueReturn = `The origin and destination is the same.`
             }else{
-              this.valueReturn = `The passport ${data.origin} is ${data.requirements} visa free for traveling to ${data.destiny}  \n  `
+              this.valueReturn = `The passport ${data.origin} is ${data.requirements} day(s) visa free for traveling to ${data.destiny}  \n  `
             }
           }
         }
